@@ -1,0 +1,125 @@
+:root {
+  --background: oklch(0.99 0.01 240);
+  --foreground: oklch(0.15 0.05 240);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0.05 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0.05 240);
+  --primary: oklch(0.55 0.22 260);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.97 0.02 260);
+  --secondary-foreground: oklch(0.25 0.12 260);
+  --muted: oklch(0.96 0.02 240);
+  --muted-foreground: oklch(0.48 0.06 240);
+  --accent: oklch(0.95 0.04 260);
+  --accent-foreground: oklch(0.25 0.12 260);
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.92 0.02 240);
+  --input: oklch(0.92 0.02 240);
+  --ring: oklch(0.55 0.22 260);
+  --sidebar: oklch(0.12 0.04 260);
+  --sidebar-foreground: oklch(0.96 0.02 260);
+  --sidebar-primary: oklch(0.55 0.22 260);
+  --sidebar-accent: oklch(0.22 0.06 260);
+  --radius: 1.25rem;
+}
+
+/* Ensure body is visible */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+.glass-dark {
+  background: rgba(10, 15, 30, 0.85) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 12px 40px -8px rgba(31, 38, 135, 0.06) !important;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, oklch(0.55 0.22 260), oklch(0.75 0.15 280));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-premium {
+  background: linear-gradient(135deg, oklch(0.65 0.22 260), oklch(0.45 0.15 280));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-premium-gradient {
+  background: linear-gradient(135deg, oklch(0.55 0.22 260), oklch(0.45 0.18 280));
+}
+
+.animate-spin-slow {
+  animation: spin 12s linear infinite;
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.glow-active {
+  box-shadow: 0 0 20px 2px rgba(99, 102, 241, 0.35);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(0.85 0.02 240);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.7 0.05 240);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
